@@ -10,10 +10,28 @@ read INPUT
 sep=":"
 
 while true; do
-      case input in
-'1')echo  option 1
-echo  " enter the model of car"
-echo  " enter the year of car" 
-echo  " enter the make of the car
+    case INPUT in
+
+    '1')
+    echo  " enter the model of car"
+    read MODEL
+    echo  " enter the year of car"
+    read YEAR
+    echo  " enter the make of the car"
+    read MAKE ;;
+
+    '2')
+    echo
+    sort My_old_cars | tr ":" " "
+    echo;;
+
+    '3')
+    echo "Goodbye";;
+
+    *)
+    echo -e "ERROR\n";;
+
+        esac
+done
  
 
